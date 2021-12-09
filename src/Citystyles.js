@@ -1,20 +1,20 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles(() =>({
-cityData: {
-  padding: '1rem',
-  backgroundColor: 'rgb(31, 31, 31)',
-  margin: '2rem auto',
-  width: '50rem',
-  maxwidth: '95%',
-},
-cityInfo :{
-    marginBottom: '5px',
-    padding: '10px',
-    border: '1px solid',
-    cursor: 'pointer',
-    border:'radius: 25px',
-  },
+// cityData: {
+//   padding: '1rem',
+//   backgroundColor: 'rgb(31, 31, 31)',
+//   margin: '2rem auto',
+//   width: '50rem',
+//   maxwidth: '95%',
+// },
+// cityInfo :{
+//     marginBottom: '5px',
+//     padding: '10px',
+//     border: '1px solid',
+//     cursor: 'pointer',
+//     border:'radius: 25px',
+//   },
 Container: {
   position: 'relative',
   right: 20, 
@@ -44,47 +44,47 @@ ListItem: {
   // margin: '10px',
   
 },
-  cityInfogood: {
-  backgroundColor: '#52B947',
-  color: '#000000',
-  borderColor: '#52B947',
-},
+//   cityInfogood: {
+//   backgroundColor: '#52B947',
+//   color: '#000000',
+//   borderColor: '#52B947',
+// },
 
-cityInfomoderate :{
-  backgroundColor: '#F3EC19',
-  color: '#000000',
-  borderColor: '#F3EC19',
-},
+// cityInfomoderate :{
+//   backgroundColor: '#F3EC19',
+//   color: '#000000',
+//   borderColor: '#F3EC19',
+// },
 
-cityInfounhealthysentitive :{
-  backgroundColor: '#F57E20',
-  color: '#FFFFFF',
-  borderColor: '#F57E20',
-},
+// cityInfounhealthysentitive :{
+//   backgroundColor: '#F57E20',
+//   color: '#FFFFFF',
+//   borderColor: '#F57E20',
+// },
 
-cityInfounhealthy :{
-  backgroundColor: '#ED1D24',
-  color: '#FFFFFF',
-  borderColor: '#ED1D24',
-},
+// cityInfounhealthy :{
+//   backgroundColor: '#ED1D24',
+//   color: '#FFFFFF',
+//   borderColor: '#ED1D24',
+// },
 
-cityInfoveryunhealthy: {
-  backgroundColor: '#7E2B7D',
-  color: '#FFFFFF',
-  borderColor: '#7E2B7D',
-},
+// cityInfoveryunhealthy: {
+//   backgroundColor: '#7E2B7D',
+//   color: '#FFFFFF',
+//   borderColor: '#7E2B7D',
+// },
 
-cityInfohazardous: {
-  backgroundColor: '#480D27',
-  color: '#FFFFFF',
-  borderColor: '#480D27',
-},
+// cityInfohazardous: {
+//   backgroundColor: '#480D27',
+//   color: '#FFFFFF',
+//   borderColor: '#480D27',
+// },
 
-cityInfounknown: {
-  backgroundColor: '#ebebeb',
-  color: '#000000',
-  borderColor: '#ebebeb',
-},
+// cityInfounknown: {
+//   backgroundColor: '#ebebeb',
+//   color: '#000000',
+//   borderColor: '#ebebeb',
+// },
 
 
 }));

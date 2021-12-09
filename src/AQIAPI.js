@@ -2,7 +2,8 @@ import React from 'react';
 import {useEffect,useState} from 'react';
 import Axios from 'axios';
 import CityList from './CityList';
-import NoDataFound from './NoDataFound';
+// import CityDetails from './CityDetails';
+// import NoDataFound from './NoDataFound';
 
 const AQIAPI = (props) => {
   const [data,setdata] = useState([]);
@@ -11,6 +12,7 @@ const AQIAPI = (props) => {
       return;
     }
     Axios.get((props.udl)).then((response) =>{
+           
            setdata(response.data.data);
         }
       );
@@ -25,6 +27,7 @@ const AQIAPI = (props) => {
     <div>
         
         <CityList cinfo ={data}/>
+        {/* <CityDetails dinfo = {data}/> */}
       
         
       
