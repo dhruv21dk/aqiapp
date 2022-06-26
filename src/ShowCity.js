@@ -1,12 +1,12 @@
 import React from 'react';
 import {useState} from 'react';
 import moment from 'moment';
-import useStyles from './Citystyles';
-// import CityDetails from './CityDetails';
+import  './Citystyles.css';
+import CityDetails from './CityDetails';
 import {List,ListItem,Typography, TextField,Container,Box,Grid} from '@material-ui/core';
-
+// import classNames from 'classnames';
 const ShowCity = (props) => {  
-    const classes = useStyles();
+    
     const [showDetails, setShowDetails] = useState(false);
     const getCategorizedAQI = (aqi) => {
     
@@ -43,14 +43,16 @@ const ShowCity = (props) => {
     const getAtTimeFormatted = time => {
         return moment(time).format('h:mm:ss a');
     }
+    
+    
 
     return(
-      <div >
-         <div className = {classes.Container}>
-             <List className = {classes.ListItem}>
+      <div className="Container">
+         <div className={`cityInfo ${getCategorizedAQI(props.aqi).className}`} onClick={ () => setShowDetails(!showDetails)}>
+             <List className="App">
              <Typography variant= "h6">At { getAtTimeFormatted(props.atTime) }: { props.placeName } - { props.aqi }</Typography>
             <div><Typography variant="h6">{ getCategorizedAQI(props.aqi).impact }</Typography></div>
-            {/* { showDetails && <CityDetails uid={ props.uid } /> } */}
+            { showDetails && <CityDetails id={ props.uid } /> }
             </List>
          </div>
 </div>

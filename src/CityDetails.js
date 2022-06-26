@@ -1,18 +1,34 @@
-// import React from 'react';
-// import useState from 'react';
-// import { TOKEN, SEARCH_CITIES_BASE_URL } from './AqiConst';
+import React from 'react';
+import {useState,useEffect} from 'react';
+import Axios from 'axios';
+import AiqiDetails from './AiqiDetails';
+import { TOKEN, FEED_AQI_BASE_URL} from './AqiConst';
 //  import {AQIAPI} from './AQIAPI';
 
-// const CityDetails = (props) => {
-// const [durl,setdurl] = useState('');
-// setdurl(`${SEARCH_CITIES_BASE_URL}${props.uid}/?token=${TOKEN}`);
+const CityDetails = (props) => {
+  const [cdata,setcdata] = useState({});
+
+const durl =(`${FEED_AQI_BASE_URL}${props.id}/?token=${TOKEN}`);
+useEffect(() =>{
+    if((durl).trim().length===0){
+      return;
+    }
+    Axios.get((durl)).then((response) =>{
+      setcdata(response.data.data);
+      console.log(response.data.data);
+           }
+      );
+
+      
+    
+  }, [durl]);
 
 
-// return(
-//     <div>
-//         <AQIAPI udl= {durl} />
-//     </div>
-// );
+return(
+    <div>
+        < AiqiDetails dinfo = {cdata} />
+    </div>
+);
 
-// };
-// export default CityDetails;
+};
+export default CityDetails;

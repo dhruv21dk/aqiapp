@@ -7,11 +7,13 @@ import CityList from './CityList';
 
 const AQIAPI = (props) => {
   const [data,setdata] = useState([]);
+  const [ddata,setddata] = useState([]);
   useEffect(() =>{
     if((props.udl).trim().length===0){
       return;
     }
     Axios.get((props.udl)).then((response) =>{
+             console.log(response.data);
            
            setdata(response.data.data);
         }
@@ -20,6 +22,22 @@ const AQIAPI = (props) => {
       
     
   }, [(props.udl)]);
+  
+  
+  // useEffect(() =>{
+  //   if((props.dudl).trim().length===0){
+  //     return;
+  //   }
+  //   Axios.get((props.dudl)).then((response) =>{
+  //        console.log(response.data.ddata);
+           
+  //         //  setdata(response.data.data);
+  //       }
+  //     );
+
+      
+    
+  // }, [(props.dudl)]);
 
     //  
 

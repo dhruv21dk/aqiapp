@@ -1,0 +1,245 @@
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+  
+  /* .cityList {
+    padding-right: 44px;;
+  } */
+  
+  .cityInfo {
+    position:relative;
+    top: 190px;
+    right:20px;
+     
+     margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  
+  .cityInfo.good {
+    background-color: #52B947;
+    color: #000000;
+    border-color: #52B947;
+  }
+  
+  .cityInfo.moderate {
+    background-color: #F3EC19;
+    color: #000000;
+    border-color: #F3EC19;
+  }
+  
+  .cityInfo.unhealthy-sentitive {
+    background-color: #F57E20;
+    color: #FFFFFF;
+    border-color: #F57E20;
+  }
+  
+  .cityInfo.unhealthy {
+    background-color: #ED1D24;
+    color: #FFFFFF;
+    border-color: #ED1D24;
+  }
+  
+  .cityInfo.very-unhealthy {
+    background-color: #7E2B7D;
+    color: #FFFFFF;
+    border-color: #7E2B7D;
+  }
+  
+  .cityInfo.hazardous {
+    background-color: #480D27;
+    color: #FFFFFF;
+    border-color: #480D27;
+  }
+  
+  .cityInfo.unknown {
+    background-color: #ebebeb;
+    color: #000000;
+    border-color: #ebebeb;
+  }
+  
+  .cityInfo .details {
+    background-color: #ebebeb;
+    color: #000000;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+    margin-top: 2px;
+  }
+  
+  .dot.unknown {
+    background-color: #bbb;
+  }
+  
+  .dot.good {
+    background-color: #52B947;
+  }
+  
+  .dot.moderate {
+    background-color: #F3EC19;
+  }
+  
+  .dot.unhealthy-sentitive {
+    background-color: #F57E20;
+  }
+  
+  .dot.unhealthy {
+    background-color: #ED1D24;
+  }
+  
+  .dot.very-unhealthy {
+    background-color: #7E2B7D;
+  }
+  
+  .dot.hazardous {
+    background-color: #480D27;
+  }
+  
+  .no-data-found {
+    background-color: #000;
+    color: #4caf50;
+    border-radius: 10px;
+    padding: 10px;
+  }
+   .Container {
+   position: 'relative';
+      right: 20;
+       left: 200;
+       top: 180;
+       
+     background-color: 'yellow';
+       padding: '20px 0px 20px 30px';
+      border : '2px red';
+       margin: '10px';
+       width: '800px';
+       border-radius: '20px';
+       box-sizing: 'border-box';
+       display: 'flex';
+       flex-direction: 'column';
+       justify-content: 'center';
+    
+    }
+     .ListItem {
+      position: 'relative';
+      right: 20;
+       left: 200;
+       top: 180;
+       
+        justify-content: center;
+
+        text-align: 'center';
+         
+        background-color: 'yellow';
+        padding: '10px,10px,10px,10px';
+        border : '2px red';
+        margin: '10px';
+        
+       }
+       @media only screen and (max-width: 600px) {
+         .Container{
+           margin-top: 80px;
+         }
+       }
+       @media only screen and (min-width: 600px) and (max-width: 960px){
+        .Container{
+          margin-top: 80px;
+        }
+       }
+
+/* // import { makeStyles } from '@mui/styles';
+
+// export default makeStyles(() =>({
+// cityData: {
+//   padding: '1rem',
+//   backgroundColor: 'rgb(31, 31, 31)',
+//   margin: '2rem auto',
+//   width: '50rem',
+//   maxwidth: '95%',
+// },
+// cityInfo :{
+//     marginBottom: '5px',
+//     padding: '10px',
+//     border: '1px solid',
+//     cursor: 'pointer',
+//     border:'radius: 25px',
+//   },
+// Container: {
+//   position: 'relative',
+//   right: 20, 
+//   left: 200,
+//   top: 180,
+//   backgroundColor: 'yellow',
+//   padding: '20px 0px 20px 30px',
+//   border : '2px red',
+//   margin: '10px',
+//   width: '800px',
+//   borderRadius: '20px',
+//   boxSizing: 'border-box',
+//   display: 'flex',
+//   flexDirection: 'column',
+//   justifyContent: 'center',
+
+// },
+
+
+//   cityInfogood: {
+//   backgroundColor: '#52B947',
+//   color: '#000000',
+//   borderColor: '#52B947',
+// },
+
+// cityInfomoderate :{
+//   backgroundColor: '#F3EC19',
+//   color: '#000000',
+//   borderColor: '#F3EC19',
+// },
+
+// cityInfounhealthysentitive :{
+//   backgroundColor: '#F57E20',
+//   color: '#FFFFFF',
+//   borderColor: '#F57E20',
+// },
+
+// cityInfounhealthy :{
+//   backgroundColor: '#ED1D24',
+//   color: '#FFFFFF',
+//   borderColor: '#ED1D24',
+// },
+
+// cityInfoveryunhealthy: {
+//   backgroundColor: '#7E2B7D',
+//   color: '#FFFFFF',
+//   borderColor: '#7E2B7D',
+// },
+
+// cityInfohazardous: {
+//   backgroundColor: '#480D27',
+//   color: '#FFFFFF',
+//   borderColor: '#480D27',
+// },
+
+// cityInfounknown: {
+//   backgroundColor: '#ebebeb',
+//   color: '#000000',
+//   borderColor: '#ebebeb',
+// },
+
+
+// })); */

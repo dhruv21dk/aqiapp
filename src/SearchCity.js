@@ -3,13 +3,12 @@ import React from 'react';
 import {useState} from 'react';
  import { TOKEN, SEARCH_CITIES_BASE_URL } from './AqiConst';
  import {AQIAPI} from './AQIAPI';
- import { makeStyles } from '@mui/styles';
-import Button from '@mui/material/Button';
-import useStyles from './Styles';
-import {Typography, TextField,Container} from '@material-ui/core';
+ import classes from './Styles.module.css';
+ import {List,ListItem,Typography, TextField,Container,Box,Grid} from '@material-ui/core';
+ import Button from '@mui/material/Button';
 // import CityList from './ShowCity/CityList';
 const SearchCity = () =>{
-  const classes = useStyles();
+ 
   const [url,seturl] = useState('');
   const [city,setcity] = useState('');
   const [cityIsValid,setcityIsValid] = useState(false);
@@ -38,8 +37,8 @@ const SearchCity = () =>{
        
        
        
-          <form  classname = {classes.container} onSubmit={searchCityHandler}>
-           <div className = {cityInputClasses}>
+          <form className={classes.formInline} onSubmit={searchCityHandler}>
+           <div >
            <label>
             <TextField
             className = {classes.field}

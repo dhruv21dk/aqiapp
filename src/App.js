@@ -1,14 +1,13 @@
 import React from 'react';
-
-import {Typography, TextField} from '@material-ui/core';
-
-import { makeStyles } from '@mui/styles';
-
-import useStyles from './Styles';
+import { useMediaQuery } from 'react-responsive'
+import {Typography} from '@material-ui/core';
+import classes from './Styles.module.css';
 import SearchCity from './SearchCity';
+import  './Citystyles.css';
 
 const App = ()=> {
-  const classes = useStyles();
+  
+  
  
   return(
     <div>
